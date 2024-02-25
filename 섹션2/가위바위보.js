@@ -1,13 +1,33 @@
-function solution(arr) {
-  let count = 1;
-  let flag = arr[0];
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > flag) {
-      count = count + 1;
-      flag = arr[i];
+function solution(arr1, arr2) {
+  let result = [];
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] === 1) {
+      if (arr2[i] === 1) {
+        result.push("D");
+      } else if (arr2[i] === 2) {
+        result.push("B");
+      } else if (arr2[i] === 3) {
+        result.push("A");
+      }
+    } else if (arr1[i] === 2) {
+      if (arr2[i] === 1) {
+        result.push("A");
+      } else if (arr2[i] === 2) {
+        result.push("D");
+      } else if (arr2[i] === 3) {
+        result.push("B");
+      }
+    } else if (arr1[i] === 3) {
+      if (arr2[i] === 1) {
+        result.push("B");
+      } else if (arr2[i] === 2) {
+        result.push("A");
+      } else if (arr2[i] === 3) {
+        result.push("D");
+      }
     }
   }
-  console.log(count);
+  console.log(result.join(" "));
 }
 
-solution([130, 135, 148, 140, 145, 150, 150, 153]);
+solution([2, 3, 3, 1, 3], [1, 1, 2, 2, 3]);
