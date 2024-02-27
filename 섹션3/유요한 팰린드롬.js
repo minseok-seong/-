@@ -1,3 +1,22 @@
-function solution(str) {}
+function solution(str) {
+  str = str
+    .split("")
+    .filter((a) => a.charCodeAt())
+    .join("")
+    .toLowerCase();
 
-solution("");
+  let reverse = "";
+  let no = "";
+  for (let i = 0; i < str.length; i++) {
+    no += str[i];
+  }
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverse += str[i];
+  }
+  console.log(no, reverse);
+
+  console.log(no === reverse ? "Yes" : "No");
+}
+
+solution("found7, time: study; Yduts; emit, 7Dnuof");
