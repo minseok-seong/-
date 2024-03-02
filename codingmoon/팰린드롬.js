@@ -1,5 +1,5 @@
 // #1. 추가 문자열 활용
-// #2. Two Pointer 투포인터 활용
+// #2. Two Pointer 투포인터 활용 시작과 끝의 중간까지만 비교한다
 
 function checkPalindrome(str) {
   let reversed = "";
