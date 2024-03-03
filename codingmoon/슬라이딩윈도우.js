@@ -13,3 +13,4 @@ function maxSumOfSubArrq(arr, k) {
   }
   return maxSum;
 }
+//서브어레이를 할때 사용한다

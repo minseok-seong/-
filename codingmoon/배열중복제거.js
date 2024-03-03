@@ -30,4 +30,4 @@ function solution(arr) {
   }
 
   return result;
-} //객체를 활용한 중복제거
+} //객체를 활용한 중복제거, 객체에 넣는데 없으면 넣고 있으면 안넣는다
