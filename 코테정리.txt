@@ -1,0 +1,111 @@
+1. slice : 시작 인덱스오 종료 인덱스를 기반으로 원하는 부분을 잘라낸다
+array.slice(start, end);
+start: 추출을 시작할 인덱스로, 해당 인덱스의 요소를 포함합니다.
+end: 추출을 종료할 인덱스로, 해당 인덱스의 요소는 포함되지 않습니다.
+새배열 반환한다
+
+filter(v=>v)빈 문자 삭제 빈문자는  false여서 필터된다
+
+배열 첫인덱스 삭제 shift vs pop
+
+filter에도 index사용가능하다 filter((a,b))여기서 b가 인덱스임
+
++'3' + +"2" = 5(넘버타입) parseInt를 대체한다
+
+reduce함수 
+const sum = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+
+Math.max() 가장 큰수 반환, 
+배열도 가능
+let numbers = [5, 10, 3, 8];
+let maxNumber = Math.max(...numbers);
+console.log(maxNumber); // 출력: 10'
+
+indexOf
+ 메서드는 JavaScript 배열에서 특정 요소의 인덱스를 검색하는 데 사용되는 메서드입니다. 이 메서드는 검색하려는 요소가 배열에 있으면 해당 요소의 첫 번째 인덱스를 반환하고, 요소가 배열에 없으면 -1을 반환합니다.
+string.indexOf(searchValue, fromIndex);
+searchValue: 검색하려는 부분 문자열.
+fromIndex (선택적): 검색을 시작할 인덱스. 이 매개변수를 생략하면 문자열의 처음부터 검색을 시작합니다. 만약 음수인 경우, 문자열의 끝에서부터 역방향으로 검색을 시작합니다.
+만약 중복이 있으면 가장 처음 인덱스 반환하고
+
+
+replaceAll 값을 대체한다
+const solution=(s,a)=>s.replaceAll(a,a.toUpperCase())
+
+문자열 split
+"oxooxoxxox".split("x");    (6) ['o', 'oo', 'o', '', 'o', ''] 끝에 x가 있어도 마지막 요소 들어옴
+
+문자열  [...문자열]하면 배열된다 join("")하면 다시 문자열
+
+sort사용할때 문자는 그냥 사용하고 숫자정렬할때만 a,b사용한다
+
+
+reduce 사용법 => 배열만 가능
+function solution(myString) {
+    var answer = [];
+    return myString.split("x").reduce((acc,cur) => {
+    if(cur.length !==0){
+        acc.push(cur)
+    }
+        return acc;
+    },[]).sort()
+    return answer;
+}
+조건별로 배열 삽입 가능 초깃값을 배열로 준다
+
+forEach : 순회
+split(" ") :공백을 기준으로 분할
+join("") join(" ") : 합치는 배열마다 공백을 준다
+find : numbers.find(element => element > 2); 배열에서 처음으로 2보다 큰 요소인 3을 찾아 반환합니다.
+findIndex numbers.findIndex(element => element === 4); 배열에서 값이 4인 요소의 인덱스를 반환합니다.
+includes fruits.includes('banana'); 배열메서드임
+substring str.substring(0, 5); 문자열에서 0부터 4까지의 문자를 추출합니다. 문자열메서드
+
+
+Object.keys
+const person = { name: 'John', age: 30, city: 'New York' };
+const keys = Object.keys(person);
+console.log(keys); // 출력: ['name', 'age', 'city']
+
+Object.values
+const person = { name: 'John', age: 30, city: 'New York' };
+const values = Object.values(person);
+console.log(values); // 출력: ['John', 30, 'New York']
+
+Object.entries
+const person = { name: 'John', age: 30, city: 'New York' };
+const entries = Object.entries(person);
+console.log(entries);
+// 출력: [['name', 'John'], ['age', 30], ['city', 'New York']]
+
+js로 배열생성팁
+Array(50).fill(0)
+
+const arr = [1,2,3,4,5]
+[arr[1],arr[3]] = [arr[3],arr[1]]
+arr출력하면 스왑됨
+
+isNaN은 문자열에서 이게 숫자인지 문자인지 체크하기 위한 함수
+
+
+약수의 특징 :  짝을 이룬다 그러면 내가 약수의갯수를 구해야하는 대상을 기준으로 제곱근까지만 포문을 돌려도 가능하다 하지만 만약 구해야하는거 제곱이 대상과 같다면 그건 +1 나머진 +2
+
+
+function solution(numlist, n) {
+  return numlist.sort((a, b) => Math.abs(a - n) - Math.abs(b - n) || b - a);
+}
+오름차순 하다가 || 동일하면 역순
+
+
+localeCompare로 문자열 배열 정렬
+
+
+
+
+
+
+
+
+
