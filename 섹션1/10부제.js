@@ -12,6 +12,7 @@ function solution(day, arr) {
   let result = 0;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].toString()[1] === day.toString()) {
+      //추가로 나누기 10을 한 나머지가 1의 자리다 이방법도 추천
       result++;
     }
   }

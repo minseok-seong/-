@@ -9,7 +9,7 @@
 // 이므로 홀수들 중 최소값은 41이 된다.
 
 function solution(arr) {
-  let arr2 = arr.filter((a) => a % 2 === 1);
+  let arr2 = arr.filter((a) => a % 2 === 1); //for of문 사용해도 ㄱㅊ
   let sum = arr2.reduce((a, b) => a + b, 0);
   console.log(Math.min(...arr2));
   console.log(sum);
