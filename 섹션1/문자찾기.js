@@ -7,4 +7,4 @@ function solution(str, s) {
   }
   console.log(result);
 }
-solution("COMPUTERPROGRAMMING", "R");
+solution("COMPUTERPROGRAMMING", "R"); //split으로 해결 가능하다 split(s)

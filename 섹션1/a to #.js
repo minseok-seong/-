@@ -9,4 +9,4 @@ function solution(str) {
   }
   console.log(result);
 }
-solution("BANANA");
+solution("BANANA"); //replace로 풀수도 있다
