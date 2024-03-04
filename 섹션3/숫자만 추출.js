@@ -8,4 +8,5 @@ function solution(str) {
   console.log(+result);
 }
 
-solution("g0en2T0s8eSoft");
+solution("g0en2T0s8eSoft"); //isNaN 숫자를 찾을수 있다 숫자면 false
+//만약 문자열로 000205이런식이면 앞에 +,  parseInt를 하면 0이 날아감

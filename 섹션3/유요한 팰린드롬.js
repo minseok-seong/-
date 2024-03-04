@@ -19,4 +19,4 @@ function solution(str) {
   console.log(no === reverse ? "Yes" : "No");
 }
 
-solution("found7, time: study; Yduts; emit, 7Dnuof");
+solution("found7, time: study; Yduts; emit, 7Dnuof"); //정규식으로 문자만 필터가능하다 replace 와 정규식 조합
