@@ -9,6 +9,7 @@ function isAnagram(strA, strB) {
   return strA.split("").sort().join() === strB.split("").sort().join();
 }
 
+
 // #2 map = {}
 function isAnagram(strA, strB) {
   if (strA.length !== strB.length) {
