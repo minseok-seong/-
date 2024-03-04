@@ -1,15 +1,11 @@
 function isPrime(n) {
-  let count = 0;
-  for (let i = 2; i < n; i++) {
+  if (n === 1) return false;
+  for (let i = 2; i <= +Math.sqrt(n); i++) {
     if (n % i === 0) {
-      count++;
+      return false;
     }
   }
-  if (count > 0) {
-    return false;
-  } else {
-    return true;
-  }
+  return true;
 }
 function solution(arr) {
   let str = "";
@@ -22,7 +18,8 @@ function solution(arr) {
     arr2.push(+str);
     str = "";
   }
-  console.log(arr2);
+  console.log(arr2); //문자로바꾸고 split reverse join하면 위에 굳이 길게 안해도된다
+
   let result = [];
   for (let i = 0; i < arr2.length; i++) {
     if (isPrime(arr2[i])) {
