@@ -10,4 +10,4 @@ function solution(n) {
   console.log(dp[n]);
 }
 
-console.log(solution(7));
+console.log(solution(8));
